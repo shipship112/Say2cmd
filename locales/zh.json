@@ -1,0 +1,134 @@
+{
+  "generateScriptPrompt": {
+    "description": "生成shell脚本的提示",
+    "other": "根据用户的提示，创建一个可以在终端中输入并运行的单行命令。\n\n目标shell是 {{.Shell}}。\n\n**重要要求：**\n1. 只返回被三个反引号包围的单行命令\n2. 命令必须能够在目标shell中直接运行\n3. 不要包含任何其他文本\n4. 确保命令在 {{.OS}} 操作系统上运行\n5. 命令应该基于当前环境信息执行，不要使用占位符路径\n6. 不要返回会启动交互式 shell 的命令，例如 bash、sh、zsh、cmd、powershell、pwsh\n7. 如果完成任务需要用户提供额外信息（例如远程仓库地址、用户名、密码等），必须在命令中使用 <尖括号占位符> 标明缺失内容，例如：git remote add origin <远程仓库URL>，而不是返回空命令或交互式 shell\n8. 绝对禁止将 bash、sh、zsh、cmd、powershell、pwsh 等 shell 解释器本身作为生成结果返回\n\n用户提示：{{.Prompt}}"
+  },
+  "generateExplanationPrompt": {
+    "description": "生成脚本解释的提示",
+    "other": "请提供对脚本的清晰、简洁的描述，使用最少的词语。以列表格式概述步骤。\n\n脚本：{{.Script}}"
+  },
+  "mockExplanation": {
+    "description": "ls命令的模拟解释",
+    "other": "列出当前目录中的所有文件和目录，包括隐藏文件。"
+  },
+  "envFileNotFound": {
+    "description": "当.env文件未找到时的警告",
+    "other": "警告：未找到.env文件，使用环境变量"
+  },
+  "errorLoadingConfig": {
+    "description": "加载配置失败时的错误信息",
+    "other": "加载配置错误：{{.Error}}"
+  },
+  "errorApiKeyNotSet": {
+    "description": "API密钥未设置时的错误信息",
+    "other": "错误：API_KEY环境变量未设置"
+  },
+  "setApiKeyHint": {
+    "description": "如何设置API密钥的提示",
+    "other": "请使用以下命令设置API密钥：export API_KEY=your-api-key"
+  },
+  "generatingScript": {
+    "description": "生成脚本时的消息",
+    "other": "正在生成脚本..."
+  },
+  "errorGeneratingScript": {
+    "description": "生成脚本失败时的错误信息",
+    "other": "生成脚本错误：{{.Error}}"
+  },
+  "generatedScript": {
+    "description": "脚本生成成功时的消息",
+    "other": "生成的脚本：{{.Script}}"
+  },
+  "generatingExplanation": {
+    "description": "生成解释时的消息",
+    "other": "正在生成解释..."
+  },
+  "errorGeneratingExplanation": {
+    "description": "生成解释失败时的错误信息",
+    "other": "生成解释错误：{{.Error}}"
+  },
+  "explanation": {
+    "description": "解释前的消息",
+    "other": "解释："
+  },
+  "executingCommand": {
+    "description": "执行命令时的消息",
+    "other": "正在执行命令..."
+  },
+  "celebrationTitle": {
+    "description": "命令成功执行后的醒目标题",
+    "other": "任务完成"
+  },
+  "celebrationInitialPromptLabel": {
+    "description": "成功横幅中的初始提示词标签",
+    "other": "初始提示词："
+  },
+  "celebrationFinalScriptLabel": {
+    "description": "成功横幅中的最终脚本标签",
+    "other": "最终脚本："
+  },
+  "errorExecutingCommand": {
+    "description": "执行命令失败时的错误信息",
+    "other": "执行命令错误：{{.Error}}"
+  },
+  "errorLoadingHistory": {
+    "description": "加载历史记录失败时的错误信息",
+    "other": "加载历史记录失败：{{.Error}}"
+  },
+  "errorReadingInput": {
+    "description": "读取交互输入失败时的错误信息",
+    "other": "读取输入失败：{{.Error}}"
+  },
+  "errorSavingHistory": {
+    "description": "保存历史记录失败时的错误信息",
+    "other": "保存历史记录失败：{{.Error}}"
+  },
+  "retryingAfterExecutionError": {
+    "description": "命令执行失败后重新生成脚本时的提示",
+    "other": "命令执行失败，正在把错误信息附加到上下文并重新生成脚本..."
+  },
+  "historyNoMatches": {
+    "description": "搜索历史记录未命中时的提示",
+    "other": "没有找到与“{{.Query}}”相关的历史记录。"
+  },
+  "historySelectPrompt": {
+    "description": "选择历史记录时的提示",
+    "other": "请选择一条历史记录："
+  },
+  "historyNoneOption": {
+    "description": "历史记录选择中的兜底选项",
+    "other": "都不是"
+  },
+  "executeScriptQuestion": {
+    "description": "询问是否执行脚本",
+    "other": "你想要执行这个脚本吗？"
+  },
+  "executeScriptOptionConfirm": {
+    "description": "确认执行脚本的选项",
+    "other": "必须呀！"
+  },
+  "executeScriptOptionRetry": {
+    "description": "要求继续调整脚本的选项",
+    "other": "换一个吧。。。"
+  },
+  "executeScriptOptionCancel": {
+    "description": "取消并退出的选项",
+    "other": "算了,不执行了,你个SB。。。"
+  },
+  "goodbyeMessage": {
+    "description": "用户选择取消时的礼貌告别",
+    "other": "好的，那这次先算了。祝你接下来一切顺利。"
+  },
+  "invalidChoice": {
+    "description": "无效选择提示",
+    "other": "无效选择。请输入'必须呀！'或'换一个吧。。。'，或者'算了,不执行了,你个SB。。。'"
+  },
+  "enterPrompt": {
+    "description": "主输入提示",
+    "other": "你想让我做什么？（如果查询历史请直接输入 -h \"查询词\"，直接回车可清屏）\n>"
+  },
+  "enterAdditionalInfo": {
+    "description": "请输入补充信息",
+    "other": "请输入补充信息：\n>"
+  }
+}

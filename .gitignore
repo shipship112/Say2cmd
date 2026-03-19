@@ -1,0 +1,11 @@
+# Ignore environment variables file
+.env
+# Ignore log files
+history.json
+feedback.json
+#log files
+*.md
+*.txt
+!README.md
+#pictures
+*.png

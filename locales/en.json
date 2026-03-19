@@ -1,0 +1,134 @@
+{
+  "generateScriptPrompt": {
+    "description": "Prompt for generating shell script",
+    "other": "Create a single line command that one can enter in a terminal and run, based on what is specified in the prompt.\n\nThe target shell is {{.Shell}}.\n\nOnly reply with the single line command surrounded by three backticks. It must be able to be directly run in the target shell. Do not include any other text.\n\nMake sure the command runs on {{.OS}} operating system. Do not return interactive shell launcher commands such as bash, sh, zsh, cmd, powershell, or pwsh.\n\nIf the task requires information not available in the context (such as a remote URL, username, password, etc.), include clearly-labeled angle-bracket placeholders in the command (e.g. git remote add origin <remote-url>) instead of returning an empty or useless command. Never return a bare shell interpreter (bash, sh, zsh, cmd, powershell, pwsh) as the generated command.\n\nThe prompt is: {{.Prompt}}"
+  },
+  "generateExplanationPrompt": {
+    "description": "Prompt for generating script explanation",
+    "other": "Please provide a clear, concise description of the script, using minimal words. Outline the steps in a list format.\n\nThe script: {{.Script}}"
+  },
+  "mockExplanation": {
+    "description": "Mock explanation for ls command",
+    "other": "Lists all files and directories in the current directory, including hidden files."
+  },
+  "envFileNotFound": {
+    "description": "Warning when .env file is not found",
+    "other": "Warning: .env file not found, using environment variables"
+  },
+  "errorLoadingConfig": {
+    "description": "Error message when loading config fails",
+    "other": "Error loading config: {{.Error}}"
+  },
+  "errorApiKeyNotSet": {
+    "description": "Error message when API key is not set",
+    "other": "Error: API_KEY environment variable is not set"
+  },
+  "setApiKeyHint": {
+    "description": "Hint on how to set API key",
+    "other": "Please set your API key using: export API_KEY=your-api-key"
+  },
+  "generatingScript": {
+    "description": "Message when generating script",
+    "other": "Generating script..."
+  },
+  "errorGeneratingScript": {
+    "description": "Error message when generating script fails",
+    "other": "Error generating script: {{.Error}}"
+  },
+  "generatedScript": {
+    "description": "Message when script is generated",
+    "other": "Generated script: {{.Script}}"
+  },
+  "generatingExplanation": {
+    "description": "Message when generating explanation",
+    "other": "Generating explanation..."
+  },
+  "errorGeneratingExplanation": {
+    "description": "Error message when generating explanation fails",
+    "other": "Error generating explanation: {{.Error}}"
+  },
+  "explanation": {
+    "description": "Message before explanation",
+    "other": "Explanation:"
+  },
+  "executingCommand": {
+    "description": "Message when executing command",
+    "other": "Executing command..."
+  },
+  "celebrationTitle": {
+    "description": "Prominent title shown after successful command execution",
+    "other": "MISSION ACCOMPLISHED"
+  },
+  "celebrationInitialPromptLabel": {
+    "description": "Label for the initial prompt in success celebration",
+    "other": "Initial prompt:"
+  },
+  "celebrationFinalScriptLabel": {
+    "description": "Label for the final script in success celebration",
+    "other": "Final script:"
+  },
+  "errorExecutingCommand": {
+    "description": "Error message when executing command fails",
+    "other": "Error executing command: {{.Error}}"
+  },
+  "errorLoadingHistory": {
+    "description": "Error message when loading prompt history fails",
+    "other": "Error loading prompt history: {{.Error}}"
+  },
+  "errorReadingInput": {
+    "description": "Error message when interactive input fails",
+    "other": "Error reading input: {{.Error}}"
+  },
+  "errorSavingHistory": {
+    "description": "Error message when saving prompt history fails",
+    "other": "Error saving prompt history: {{.Error}}"
+  },
+  "retryingAfterExecutionError": {
+    "description": "Message shown before regenerating a script after execution failure",
+    "other": "Command execution failed. Adding the failure output to the context and regenerating the script..."
+  },
+  "historyNoMatches": {
+    "description": "Shown when no history entries match the search query",
+    "other": "No history entries matched \"{{.Query}}\"."
+  },
+  "historySelectPrompt": {
+    "description": "Prompt shown before selecting a history entry",
+    "other": "Select a history entry:"
+  },
+  "historyNoneOption": {
+    "description": "Fallback option when none of the history results is correct",
+    "other": "None of them"
+  },
+  "executeScriptQuestion": {
+    "description": "Question about executing script",
+    "other": "Do you want to execute this script?"
+  },
+  "executeScriptOptionConfirm": {
+    "description": "Confirm script execution option",
+    "other": "ok"
+  },
+  "executeScriptOptionRetry": {
+    "description": "Request more changes to the script option",
+    "other": "not"
+  },
+  "executeScriptOptionCancel": {
+    "description": "Cancel and exit option",
+    "other": "maybe later"
+  },
+  "goodbyeMessage": {
+    "description": "Polite farewell when the user cancels",
+    "other": "Alright, we'll leave it here for now. Have a good one."
+  },
+  "invalidChoice": {
+    "description": "Invalid choice prompt",
+    "other": "Invalid choice. Please enter 'ok' or 'not'."
+  },
+  "enterPrompt": {
+    "description": "Prompt for main user request",
+    "other": "What would you like me to do? (For history search, enter -h \"query\"; press Enter to clear screen)\n>"
+  },
+  "enterAdditionalInfo": {
+    "description": "Prompt for additional information",
+    "other": "Please enter additional information:\n>"
+  }
+}
