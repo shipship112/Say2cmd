@@ -4,6 +4,8 @@ go 1.25.0
 
 require (
 	github.com/AlecAivazis/survey/v2 v2.3.7
+	github.com/cloudwego/eino v0.8.9
+	github.com/cloudwego/eino-ext/components/model/openai v0.1.12
 	github.com/go-ego/gse v1.0.2
 	github.com/joho/godotenv v1.5.1
 	github.com/nicksnyder/go-i18n/v2 v2.6.1
@@ -17,8 +19,6 @@ require (
 	github.com/bytedance/sonic v1.15.0 // indirect
 	github.com/bytedance/sonic/loader v0.5.0 // indirect
 	github.com/cloudwego/base64x v0.1.6 // indirect
-	github.com/cloudwego/eino v0.8.9 // indirect
-	github.com/cloudwego/eino-ext/components/model/openai v0.1.12 // indirect
 	github.com/cloudwego/eino-ext/libs/acl/openai v0.1.16 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/eino-contrib/jsonschema v1.0.3 // indirect
