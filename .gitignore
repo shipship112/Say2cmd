@@ -1,11 +1,58 @@
-# Ignore environment variables file
+# ===============
+# 项目特定 (Project Specific)
+# ===============
+# Ignore environment variables file (API Keys)
 .env
-# Ignore log files
+
+# Ignore data/log files
 history.json
 feedback.json
-#log files
+
+# Ignore temp doc files
 *.md
 *.txt
 !README.md
-#pictures
+
+# Ignore pictures
 *.png
+
+# ===============
+# Go 语言产物 (Go Build Outputs)
+# ===============
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+
+# Test output and profiles
+*.test
+*.prof
+cover.out
+coverage.html
+coverage.out
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Dependency directories
+vendor/
+
+# ===============
+# 开发工具 & IDE (IDE & Editor)
+# ===============
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===============
+# 操作系统特定 (OS Specific)
+# ===============
+.DS_Store
+Thumbs.db
+desktop.ini
