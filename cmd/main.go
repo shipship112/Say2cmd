@@ -208,7 +208,7 @@ func main() {
 			// promptUserForAction() 使用 survey.Select 展示三个选项：
 			//   - "必须呀"（confirm）：执行命令
 			//   - "换一个吧。。。"（retry）：输入补充信息重新生成
-			//   - "算了,不执行了,你个SB。。。"（cancel）：退出程序
+			//   - "算了,不执行了。。。"（cancel）：退出程序
 			selectedOption := promptUserForAction(localizer)
 			if selectedOption == "" {
 				// 用户选择无效，重新生成

@@ -113,7 +113,7 @@
   },
   "executeScriptOptionCancel": {
     "description": "取消并退出的选项",
-    "other": "算了,不执行了,你个SB。。。"
+    "other": "算了,不执行了。。。"
   },
   "goodbyeMessage": {
     "description": "用户选择取消时的礼貌告别",

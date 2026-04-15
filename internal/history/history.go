@@ -74,7 +74,7 @@ func DefaultPath() (string, error) {
 	if err != nil {
 		return "", err
 	}
-	return filepath.Join(homeDir, ".github/xiuivfbc/NaturalCmd_history.json"), nil
+	return filepath.Join(homeDir, ".github/shipship112/Say2cmd.json"), nil
 }
 
 // Add 新增或更新一条历史记录，并按 LRU 规则移动到最前。
