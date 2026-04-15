@@ -13,8 +13,8 @@ import (
 	"github.com/nicksnyder/go-i18n/v2/i18n"
 	"golang.org/x/text/language"
 
-	"github/xiuivfbc/NaturalCmd/internal/config"
-	"github/xiuivfbc/NaturalCmd/internal/utils"
+	"github/shipship112/Say2cmd/internal/config"
+	"github/shipship112/Say2cmd/internal/utils"
 )
 
 // 全局 i18n bundle

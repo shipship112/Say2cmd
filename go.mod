@@ -1,4 +1,4 @@
-module github/xiuivfbc/NaturalCmd
+module github/shipship112/Say2cmd
 
 go 1.25.0
 

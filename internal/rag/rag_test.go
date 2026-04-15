@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github/xiuivfbc/NaturalCmd/internal/history"
+	"github/shipship112/Say2cmd/internal/history"
 )
 
 func TestBuildHistoryContextReturnsRelevantEntries(t *testing.T) {

@@ -13,12 +13,12 @@ import (
 	"github.com/nicksnyder/go-i18n/v2/i18n"
 	"golang.org/x/text/language"
 
-	"github/xiuivfbc/NaturalCmd/internal/completion"
-	"github/xiuivfbc/NaturalCmd/internal/config"
-	"github/xiuivfbc/NaturalCmd/internal/executor"
-	"github/xiuivfbc/NaturalCmd/internal/history"
-	"github/xiuivfbc/NaturalCmd/internal/rag"
-	"github/xiuivfbc/NaturalCmd/internal/ui"
+	"github/shipship112/Say2cmd/internal/completion"
+	"github/shipship112/Say2cmd/internal/config"
+	"github/shipship112/Say2cmd/internal/executor"
+	"github/shipship112/Say2cmd/internal/history"
+	"github/shipship112/Say2cmd/internal/rag"
+	"github/shipship112/Say2cmd/internal/ui"
 )
 
 // bundle 全局 i18n bundle，用于国际化翻译
@@ -112,7 +112,7 @@ func main() {
 
 	// 步骤 5：加载历史记录
 	// history.Load() 会：
-	//   1. 从指定路径（或默认路径 ~/.github/xiuivfbc/NaturalCmd_history.json）读取 JSON 文件
+	//   1. 从指定路径（或默认路径 ~/.github/shipship112/Say2cmd_history.json）读取 JSON 文件
 	//   2. 解析为 []Entry 列表
 	//   3. 返回 Store 对象，提供 Add() 和 Search() 方法
 	// 注意：历史记录加载失败不会导致程序退出，仅打印警告
@@ -129,7 +129,7 @@ func main() {
 	// 步骤 6：加载 RAG 反馈数据（如果启用 RAG）
 	// FeedbackStore 记录每个命令的成功/失败执行次数
 	// 用于 RAG 检索时调整权重（成功+1，失败-1）
-	// 反馈文件默认路径：~/.github/xiuivfbc/NaturalCmd_rag_feedback.json
+	// 反馈文件默认路径：~/.github/shipship112/Say2cmd_rag_feedback.json
 	var feedbackStore *rag.FeedbackStore
 	if cfg.RAGEnabled {
 		feedbackStore, err = rag.LoadFeedback(cfg.RAGFeedbackFile)

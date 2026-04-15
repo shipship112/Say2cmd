@@ -59,7 +59,7 @@ func DefaultFeedbackPath() (string, error) {
 	if err != nil {
 		return "", err
 	}
-	return filepath.Join(homeDir, ".github/xiuivfbc/NaturalCmd_rag_feedback.json"), nil
+	return filepath.Join(homeDir, ".github/shipship112/Say2cmd_rag_feedback.json"), nil
 }
 
 // RecordSuccess 记录成功执行，提升对应命令权重。

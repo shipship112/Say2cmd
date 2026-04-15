@@ -5,8 +5,8 @@ import (
 	"sort"
 	"strings"
 
-	"github/xiuivfbc/NaturalCmd/internal/history"
-	"github/xiuivfbc/NaturalCmd/internal/tokenizer"
+	"github/shipship112/Say2cmd/internal/history"
+	"github/shipship112/Say2cmd/internal/tokenizer"
 )
 
 const defaultTopK = 3 // 默认返回前 3 条最相关的历史记录

@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github/xiuivfbc/NaturalCmd/internal/tokenizer"
+	"github/shipship112/Say2cmd/internal/tokenizer"
 )
 
 const defaultCapacity = 50
@@ -74,7 +74,7 @@ func DefaultPath() (string, error) {
 	if err != nil {
 		return "", err
 	}
-	return filepath.Join(homeDir, ".github/shipship112/Say2cmd.json"), nil
+	return filepath.Join(homeDir, ".github/shipship112/Say2cmd_history.json"), nil
 }
 
 // Add 新增或更新一条历史记录，并按 LRU 规则移动到最前。
